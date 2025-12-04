@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>summitEHR | The Renaissance of Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+              summit: {
+                50: '#f4fbf2',
+                100: '#e6f6e2',
+                200: '#cceec3',
+                300: '#a2e093',
+                400: '#71cb5e',
+                500: '#4c9f38', // Logo Green Base
+                600: '#3a8028',
+                700: '#306522',
+                800: '#29511f',
+                900: '#23431c',
+                950: '#0f240d',
+              },
+              ocean: {
+                500: '#005eb8', // Logo Blue Base (replacing previous light blue)
+                600: '#004c94',
+                700: '#003d7a',
+                800: '#002f5e',
+                900: '#00274d',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Base Reveal State */
+      .reveal {
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); /* Elegant easing */
+        will-change: transform, opacity;
+      }
+
+      /* Directional Variants */
+      .reveal-up { transform: translateY(40px); }
+      .reveal-down { transform: translateY(-40px); }
+      .reveal-left { transform: translateX(-40px); }
+      .reveal-right { transform: translateX(40px); }
+      .reveal-zoom { transform: scale(0.92); }
+
+      /* Active State (Visible) */
+      .reveal.active {
+        opacity: 1;
+        transform: translate(0) scale(1);
+      }
+
+      /* Stagger Delays */
+      .delay-100 { transition-delay: 0.1s; }
+      .delay-200 { transition-delay: 0.2s; }
+      .delay-300 { transition-delay: 0.3s; }
+      .delay-400 { transition-delay: 0.4s; }
+      .delay-500 { transition-delay: 0.5s; }
+
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
