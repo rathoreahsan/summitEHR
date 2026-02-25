@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import RequestDemoForm from './components/RequestDemoForm';
 import { Logo, CheckCircle, MenuIcon, ArrowRight, Microphone, Pill, CreditCard, Beaker, Clipboard, Shield, Lock, BadgeCheck, VideoCamera, Envelope, DocumentText, ChartBar, Cube, BuildingOffice } from './components/Icons';
+// social media icons from react-icons
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import AIChat from './components/AIChat';
 
 // image assets that need to be bundled by Vite
@@ -726,11 +728,16 @@ const Footer: React.FC = () => (
           </p>
           <div className="flex gap-4">
              {/* Social placeholders */}
-             {[1, 2, 3].map(i => (
-                <div key={i} className="w-8 h-8 rounded-full bg-gray-800 hover:bg-summit-600 transition-colors cursor-pointer flex items-center justify-center group">
-                  <div className="w-4 h-4 bg-gray-500 group-hover:bg-white rounded-sm transition-colors"></div>
-                </div>
-             ))}
+             {/* social links */}
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-summit-600 transition-colors flex items-center justify-center group">
+            <FaLinkedinIn className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors" />
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-summit-600 transition-colors flex items-center justify-center group">
+            <FaFacebookF className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-summit-600 transition-colors flex items-center justify-center group">
+            <FaTwitter className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors" />
+          </a>
           </div>
         </div>
         
